@@ -42,6 +42,8 @@ public class GeneralInfo extends AppCompatActivity {
 
     }
 
+
+    
     public static class MyPagerAdapter extends FragmentPagerAdapter {
         private static int NUM_ITEMS = 3;
         private String tabTitles[] = new String[] { "Tab1", "Tab2", "Tab3" };
