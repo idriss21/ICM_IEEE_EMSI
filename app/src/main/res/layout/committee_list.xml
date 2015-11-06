@@ -5,7 +5,7 @@
               android:layout_height="match_parent">
 
 
-    <!--<include android:id="@+id/app_bar_kenotes_info" layout="@layout/app_bar" />-->
+ <!--<include android:id="@+id/app_bar_kenotes_info" layout="@layout/app_bar" />-->
 
 
 
