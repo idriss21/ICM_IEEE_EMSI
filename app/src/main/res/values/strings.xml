@@ -6,6 +6,15 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="call_for_papers_desc">
+        The International Conference on Microelectronics has been held in numerous countries across
+        the Middle East and Asia for the past 26 years. The 27th edition of the conference will be held
+        in Casablanca, Morocco. IEEE-ICM 2015 will include oral, poster sessions and tutorials given by
+        experts on state-of-the-art topics. The regular technical program will run for three days. In addition,
+        tutorial sessions will be held on the first day of the conference. Papers are solicited in, but not
+        limited to, the following topics:
+    </string>
+
     <string name="descrip_ieee">
         The 27th international conference on microelectronics (ICM 2015) will be held in Casablanca, Morocco, on December 20-23
         , 2015 organized by Moroccan School on engineering science (EMSI) Casablanca and Lorraine University France.

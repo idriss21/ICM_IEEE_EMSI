@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,9 +14,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="app.ieee.ma.emsi.navdrawtest.MainActivity"
     tools:showIn="@layout/app_bar_main">
-
-
-
 
 
     <LinearLayout
@@ -53,8 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="198dp"
                 android:layout_gravity="center_horizontal|bottom"
-                android:paddingLeft="20dp"
-                >
+                android:paddingLeft="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import app.ieee.ma.emsi.navdrawtest.fragment.DisplayItem_CallForPapers;
 import app.ieee.ma.emsi.navdrawtest.fragment.DisplayItem_Commitee;
 import app.ieee.ma.emsi.navdrawtest.fragment.DisplayItem_Person;
 import app.ieee.ma.emsi.navdrawtest.fragment.GeneralInfo;
@@ -95,7 +96,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+
+            Intent intent = new Intent(getApplicationContext(), DisplayItem_CallForPapers.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.lefttoright_enter, R.anim.lefttoright_exit);
         } else if (id == R.id.nav_gallery) {
 
             Intent intent = new Intent(getApplicationContext(), DisplayItem_Person.class);

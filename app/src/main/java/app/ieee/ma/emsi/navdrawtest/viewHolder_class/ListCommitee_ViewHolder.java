@@ -15,11 +15,11 @@ import static android.support.v7.widget.RecyclerView.ViewHolder;
 /**
  * Created by idriss on 04/11/2015.
  */
-public class ListCommitee  extends RecyclerView.Adapter<ListCommitee.CommiteeViewHolder> {
+public class ListCommitee_ViewHolder extends RecyclerView.Adapter<ListCommitee_ViewHolder.CommiteeViewHolder> {
 
     private Commitee[]  ArrayCommitee;
 
-    public ListCommitee(Commitee[] commitee) {
+    public ListCommitee_ViewHolder(Commitee[] commitee) {
         ArrayCommitee = commitee;
     }
 

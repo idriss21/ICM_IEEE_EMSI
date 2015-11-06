@@ -14,7 +14,7 @@ import app.ieee.ma.emsi.navdrawtest.classes.Person;
 /**
  * Created by idriss on 01/11/2015.
  */
-public class ListPerson_ViewHolder extends RecyclerView.Adapter<ListPerson_ViewHolder.PersonViewHolder> {
+public class ListPerson_ViewHolder extends RecyclerView.Adapter<ListPerson_ViewHolder.PersonViewHolder>  {
 
 
     private Person[] personArray;

@@ -12,7 +12,8 @@ import android.view.animation.OvershootInterpolator;
 import app.ieee.ma.emsi.navdrawtest.R;
 import app.ieee.ma.emsi.navdrawtest.classes.Person;
 import app.ieee.ma.emsi.navdrawtest.viewHolder_class.ListPerson_ViewHolder;
-import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
+import jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInRightAnimationAdapter;
 
 /**
  * Created by idriss on 01/11/2015.
@@ -63,9 +64,13 @@ public class DisplayItem_Person extends ActionBarActivity implements ListPerson_
         ListPerson_ViewHolder mAdapter = new ListPerson_ViewHolder(person);
         mAdapter.setClickListner(this);
         // 4. set adapter
-        recyclerView.setAdapter(mAdapter);
+        AlphaInAnimationAdapter alphaAdapter = new AlphaInAnimationAdapter(mAdapter);
+        alphaAdapter.setDuration(2000);
+        alphaAdapter.setInterpolator(new OvershootInterpolator());
+        alphaAdapter.setFirstOnly(false);
+        recyclerView.setAdapter(new SlideInRightAnimationAdapter(alphaAdapter));
         // 5. set item animator to DefaultAnimator
-        recyclerView.setItemAnimator(new SlideInUpAnimator(new OvershootInterpolator(1f)));
+        //recyclerView.setItemAnimator(new SlideInLeftAnimator());
 
     }
 
