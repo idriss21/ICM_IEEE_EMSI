@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.animation.OvershootInterpolator;
 
 import app.ieee.ma.emsi.navdrawtest.R;
@@ -22,10 +24,36 @@ public class DisplayItem_CallForPapers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.call_for_papers);
 
-        /*final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
-*/
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_white);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+
+
+
         ListCFP();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.righttoleft_enter, R.anim.righttoleft_exit);
+        //setResult(Activity.RESULT_OK, null);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home)
+        {
+            finish();
+            onBackPressed();
+        }
+        return   super.onOptionsItemSelected(item);
     }
 
     private void ListCFP() {

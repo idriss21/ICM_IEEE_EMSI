@@ -120,6 +120,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
+            Intent intent = new Intent(getApplicationContext(), MaterialListActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.lefttoright_enter, R.anim.lefttoright_exit);
+
         } else if (id == R.id.nav_send) {
 
         }

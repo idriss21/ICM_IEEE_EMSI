@@ -43,7 +43,7 @@ public class ListCommitee_ViewHolder extends RecyclerView.Adapter<ListCommitee_V
 
     @Override
     public CommiteeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.committee_list,parent,false);
+        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_commitee,parent,false);
         CommiteeViewHolder listCommitee = new CommiteeViewHolder(vw);
         return listCommitee;
 

@@ -25,7 +25,7 @@ public class CallForPaper_ViewHolder  extends RecyclerView.Adapter<CallForPaper_
     public CFPViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.call_for_papers,parent,false);
+        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_commitee,parent,false);
         CFPViewHolder listCFP = new CFPViewHolder(vw);
         return listCFP;
     }

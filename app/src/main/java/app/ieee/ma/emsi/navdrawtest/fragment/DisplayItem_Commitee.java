@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.animation.OvershootInterpolator;
 
 import app.ieee.ma.emsi.navdrawtest.R;
@@ -22,12 +23,19 @@ public class DisplayItem_Commitee extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.committee_list);
 
-        //initToolbar();
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_white);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+
         ListCommittee();
 
     }
 
-    public void initToolbar()
+   /* public void initToolbar()
     {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
@@ -36,7 +44,7 @@ public class DisplayItem_Commitee extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-    }
+    }*/
 
     public void ListCommittee()
     {
@@ -44,6 +52,7 @@ public class DisplayItem_Commitee extends ActionBarActivity {
 
         // 1. get a reference to recyclerView
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_committee);
+        recyclerView.setHasFixedSize(true);
 
         Commitee commitee[] =
                 {
@@ -166,7 +175,7 @@ public class DisplayItem_Commitee extends ActionBarActivity {
 
 
         // 2. set layoutManger
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         // 3. create an adapter
         ListCommitee_ViewHolder mAdapter = new ListCommitee_ViewHolder(commitee);
         // 4. set adapter
@@ -180,5 +189,22 @@ public class DisplayItem_Commitee extends ActionBarActivity {
 
     }
 
+
+        @Override
+        public void onBackPressed() {
+                super.onBackPressed();
+                overridePendingTransition(R.anim.righttoleft_enter, R.anim.righttoleft_exit);
+                //setResult(Activity.RESULT_OK, null);
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+                if(item.getItemId() == android.R.id.home)
+                {
+                        finish();
+                        onBackPressed();
+                }
+                return   super.onOptionsItemSelected(item);
+        }
 
 }

@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
 
@@ -17,6 +19,7 @@ import app.ieee.ma.emsi.navdrawtest.wiki_fragment.FirstFragment;
  */
 public class GeneralInfo extends AppCompatActivity {
 
+
     public static final String ARG_PAGE = "ARG_PAGE";
 
 
@@ -25,9 +28,16 @@ public class GeneralInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.info_fragment);
+
+        //initToolBar
+
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_white);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager vPager = (ViewPager) findViewById(R.id.vp);
@@ -76,6 +86,24 @@ public class GeneralInfo extends AppCompatActivity {
             return tabTitles[position];
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.righttoleft_enter, R.anim.righttoleft_exit);
+        //setResult(Activity.RESULT_OK, null);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home)
+        {
+            finish();
+            onBackPressed();
+        }
+        return   super.onOptionsItemSelected(item);
     }
 
 }

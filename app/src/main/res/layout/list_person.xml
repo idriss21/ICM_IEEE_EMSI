@@ -8,55 +8,10 @@
 
 
 
-    <!--<include android:id="@+id/app_bar_kenotes_info" layout="@layout/app_bar" />-->
+    <include android:id="@+id/app_bar_kenotes_info" layout="@layout/app_bar" />
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:elevation="4dp">
 
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="16dp">
-
-           <ImageView
-               android:layout_width="80dp"
-               android:layout_height="80dp"
-               android:padding="15dp"
-               android:src="@drawable/ieee1"
-               android:id="@+id/image_item"
-               />
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textSize="15dp"
-               android:id="@+id/descrip_item"
-               android:text="@string/appbar_scrolling_view_behavior"
-               android:layout_alignParentTop="true"
-               android:layout_toRightOf="@id/image_item"
-               android:padding="10dp"
-               />
-
-           <TextView
-               android:id="@+id/date_item"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text=" Date  :12/08/2016"
-               android:textColor="@color/colorPrimaryDark"
-               android:layout_toRightOf="@id/image_item"
-               android:layout_below="@id/descrip_item"
-               android:padding="5dp"
-               />
-
-       </RelativeLayout>
-
-
-    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"

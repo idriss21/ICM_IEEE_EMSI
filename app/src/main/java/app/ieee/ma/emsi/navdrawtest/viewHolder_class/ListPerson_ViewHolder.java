@@ -29,7 +29,7 @@ public class ListPerson_ViewHolder extends RecyclerView.Adapter<ListPerson_ViewH
     public PersonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         //LayoutInflater : Instantiates a layout XML file into its corresponding View objects.
-        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_person,parent,false);
+        View vw = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_keynotes,parent,false);
         PersonViewHolder personViewHolder = new PersonViewHolder(vw);
         return personViewHolder;
     }
